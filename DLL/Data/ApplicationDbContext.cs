@@ -37,6 +37,16 @@ namespace DLL.Data
                 NormalizedName = BLL.DTO.UserRoles.User.ToUpper()
             }
             );
+
+            builder.Entity<Route>().HasData(
+            new Route
+            {
+                Id = Guid.NewGuid(),
+                Adres = "https://localhost:7001",
+                GPU = "RTX 2060 PC",
+                CPU = "AMD Ryzen 7 4800H"
+            }
+            );
         }
     }
 }
