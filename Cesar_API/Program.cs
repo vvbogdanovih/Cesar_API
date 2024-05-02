@@ -18,7 +18,11 @@ namespace Cesar_API
             var builder = WebApplication.CreateBuilder(args);
             ConfigurationManager configuration = builder.Configuration;
             // Add services to the container.
-
+            builder.WebHost.ConfigureKestrel(serverOptions =>
+            {
+                // Збільшіть максимальний розмір тіла запиту (у цьому прикладі до 50 МБ)
+                serverOptions.Limits.MaxRequestBodySize = 1024 * 1024 * 1024; // 50 МБ
+            });
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
