@@ -19,7 +19,7 @@ namespace Cesar_API.Controllers
         public async Task<ActionResult<List<GPURouteDTO>>> GetGPURoutes()
         {
             // Retrieve the list of routes from the database
-            var routes = await _context.Routes.Where(r => !string.IsNullOrEmpty(r.GPU)).Select(route => new GPURouteDTO(route)).ToListAsync();
+            var routes = await _context.Routes.Where(r => !string.IsNullOrEmpty(r.GPU)).Select(route => new GPURouteDTO(route.Adres, route.GPU)).ToListAsync();
 
             // Return the list of routes as an Ok response
             return Ok(routes);
@@ -29,7 +29,7 @@ namespace Cesar_API.Controllers
         public async Task<ActionResult<List<GPURouteDTO>>> GetCPURoutes()
         {
             // Retrieve the list of routes from the database
-            var routes = await _context.Routes.Where(r => !string.IsNullOrEmpty(r.CPU)).Select(route => new CPURouteDTO(route)).ToListAsync();
+            var routes = await _context.Routes.Where(r => !string.IsNullOrEmpty(r.CPU)).Select(route => new CPURouteDTO(route.Adres, route.CPU)).ToListAsync();
 
             // Return the list of routes as an Ok response
             return Ok(routes);

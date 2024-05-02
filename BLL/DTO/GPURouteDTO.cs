@@ -1,4 +1,4 @@
-﻿using DLL.Data.Entities;
+﻿
 
 namespace BLL.DTO
 {
@@ -6,10 +6,10 @@ namespace BLL.DTO
     {
         public string Adres { get; set; }
         public string? GPU { get; set; }
-        public GPURouteDTO(Route route)
+        public GPURouteDTO(string adres, string gpu)
         {
-            Adres = route.Adres;
-            GPU = route.GPU;
+            Adres = adres;
+            GPU = gpu;
         }
         public GPURouteDTO() { }
     }

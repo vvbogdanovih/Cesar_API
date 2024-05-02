@@ -14,13 +14,23 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj" />
     <ProjectReference Include="..\DLL\DLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BLL">
+      <HintPath>..\BLL\bin\Debug\net8.0\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DLL">
+      <HintPath>..\DLL\bin\Debug\net8.0\DLL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
