@@ -9,7 +9,7 @@ namespace Cesar_API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RouteController : Controller
+    public class RouteController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
         public RouteController(ApplicationDbContext context) { 
@@ -53,12 +53,10 @@ namespace Cesar_API.Controllers
             DLL.Data.Entities.Route entity = _context.Routes.Find(r.Id);
             if (entity != null)
             {
-                // Змініть значення поля, яке потрібно редагувати
                 entity.Adres = r.Adres;
                 entity.GPU = r.GPU;
                 entity.CPU = r.CPU;
 
-                // Збережіть зміни
                 _context.SaveChanges();
                 return Ok();
             }

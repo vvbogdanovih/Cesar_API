@@ -1,19 +1,14 @@
 ﻿using BLL.DTO;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
-using System.Numerics;
-using System.Security.Claims;
 using Newtonsoft.Json;
 using System.Text;
 using BLL.Models;
-using System.Globalization;
 
 namespace Cesar_API.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class BenchmarkController : Controller
+    public class BenchmarkController : ControllerBase
     {
 
         [HttpPost]

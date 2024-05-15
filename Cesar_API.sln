@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cesar_API", "Cesar_API\Cesar_API.csproj", "{1F2076E2-7659-447F-9F6E-F0A0DFDBBD96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cesar_API", "Cesar_API\Cesar_API.csproj", "{1F2076E2-7659-447F-9F6E-F0A0DFDBBD96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{D8C5F589-1801-45A7-8DA9-12C646E6A4FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{D8C5F589-1801-45A7-8DA9-12C646E6A4FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "DLL\DLL.csproj", "{AB2C34D2-8DEB-4817-B106-90DB44AE2A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DLL", "DLL\DLL.csproj", "{AB2C34D2-8DEB-4817-B106-90DB44AE2A7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
